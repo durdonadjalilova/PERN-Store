@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 /////////////////////////////////////
 // REMOVE AFTER SUCCESSFUL DEPLOYMENT
 /////////////////////////////////////
+//tetsting
 const db = require("./db/dbConfig.js");
 
 app.get("/test", async (req, res) => {
