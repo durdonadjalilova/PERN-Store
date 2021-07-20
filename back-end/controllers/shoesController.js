@@ -1,8 +1,17 @@
 const express = require("express");
 const shoes = express.Router();
 
-const { getAllShoes} = require ("../queries/shoes")
+const { fetchAllShoes, createShoe } = require("../queries/shoes");
 
-shoes.get('/')
+shoes.get("/", async (req, res) => {
+  const shoes = await fetchAllShoes();
+  res.json(shoes);
+});
 
-module.exports = shoes
+shoes.post("/", async (req, res) => {
+  const newShoe = req.body;
+  const result = await createShoe(newShoe);
+  res.json(result);
+});
+
+module.exports = shoes;
