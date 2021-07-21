@@ -5,9 +5,8 @@ CREATE DATABASE shoestore_dev;
 
 DROP TABLE IF EXISTS shoes;
 
-
 CREATE TABLE shoes (
-    id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY, 
     brand TEXT NOT NULL,
     name TEXT NOT NULL,
     image_url TEXT NOT NULL,
