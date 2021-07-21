@@ -10,7 +10,9 @@ INSERT INTO shoes (brand, name, image_url, price, size, gender) VALUES
 ('Reebok', 'Club C 85 Vintage', 'https://assets.reebok.com/images/w_766,h_766,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/94b58f6f42004f03949faa99017b30fb_9366/club-c-85-vintage-mens-shoes.jpg', 75, 9.5, 'UNI'),
 ('Dr. Martens', 'JADON SMOOTH LEATHER PALTFORM BOOTS', 'https://i1.adis.ws/i/drmartens/15265001.80.jpg?$medium$', 180, 9, 'UNI'),
 ('Nike', 'NIKE BALZER MID 77 VINTAGE', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-3861ea78-44bd-44cd-9be0-ed185d75143e/blazer-mid-77-vintage-womens-shoes-25h71W.png', 100, 8, 'UNI'),
+
 ('UGGS', 'CLASSIC SHORT II', 'https://www.ugg.com/dw/image/v2/BDJD_PRD/on/demandware.static/-/Sites-UGG-NA-master/default/dw8842ece1/images/transparent/1016223-SHAD_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=png&bgcolor=f9f9f9', 118.99, 10, 'W'),
+
 ('LV', 'ULTIMATE PUMP', 'https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-ultimate-pump--ALUE3JSC02_PM2_Front%20view.png?wid=656&hei=656', 1070, 7, 'W'),
 ('Balenciaga', 'TRIPLE S SNEAKERS', 'https://balenciaga.dam.kering.com/m/433a1165b763d194/Large-524036W2CA19000_F.jpg?v=4', 995, 7.5, 'M'),
 ('Yeezy', 'Yeezy Boost 350 V2 Bred', 'https://image.goat.com/crop/750/attachments/product_template_additional_pictures/images/008/492/440/original/94407_01.jpg.jpeg?1513117674', 310, 6, 'M'),
@@ -18,3 +20,9 @@ INSERT INTO shoes (brand, name, image_url, price, size, gender) VALUES
 ('New Balance', '574', 'https://nb.scene7.com/is/image/NB/ml574aa2_nb_02_i?$pdpflexf2$&wid=440&hei=440', 79.99, 7, 'M'),
 ('Skechers', 'GOwalk  Arch Fir - Daisy Dreams', 'https://www.skechers.com/dw/image/v2/BDCN_PRD/on/demandware.static/-/Sites-skechers-master/default/dw69f38721/images/large/124402_NVY.jpg?sw=800', 85, 9, 'W')
 ;
+
+
+
+
+
+

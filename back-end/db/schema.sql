@@ -2,6 +2,7 @@ DROP DATABASE IF EXISTS shoestore_dev;
 CREATE DATABASE shoestore_dev;
 
 \c shoestore_dev;
+
 DROP TABLE IF EXISTS shoes;
 
 CREATE TABLE shoes (
