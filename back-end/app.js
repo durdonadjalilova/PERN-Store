@@ -12,4 +12,8 @@ app.get("/", (req, res) => {
   res.send("Welcome to our PERN Shoe Store");
 });
 
+app.get("*", (req, res) => {
+  res.status(404).send("Page not found");
+});  
+
 module.exports = app;
