@@ -31,10 +31,10 @@ const Shoes = () => {
               <h2>{brand}</h2>
               <h3>{name}</h3>
               <img src={image_url} alt="shoes" />
+                </Link>
               <h4>${price}</h4>
               <h4>Size: {size}</h4>
               <h4>Gender: {gender}</h4>
-                </Link>
             </li>
           );
         })}
