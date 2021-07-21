@@ -1,9 +1,22 @@
 const express = require("express");
 const shoes = express.Router();
 
-const { getAllShoes, getShoe, updateShoe, deleteShoe} = require ("../queries/shoes")
 
-shoes.get('/')
+const { fetchAllShoes, createShoe, getShoe, updateShoe, deleteShoe} = require ("../queries/shoes")
+
+
+shoes.get("/", async (req, res) => {
+  const shoes = await fetchAllShoes();
+  res.json(shoes);
+});
+
+
+shoes.post("/", async (req, res) => {
+  const newShoe = req.body;
+  const result = await createShoe(newShoe);
+  res.json(result);
+});
+
 
 shoes.get("/:id", async (req, res) => {
     const { id } = req.params;
@@ -34,3 +47,4 @@ shoes.put("/:id", async (req, res) => {
   });
   
 module.exports = shoes
+
