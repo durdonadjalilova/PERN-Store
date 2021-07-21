@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS shoeStore_dev;
+CREATE DATABASE shoeStore_dev;
+
 CREATE TABLE shoes (
     id SERIAL PRIMARY KEY,
     brand TEXT NOT NULL,
