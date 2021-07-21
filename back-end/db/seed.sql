@@ -1,3 +1,5 @@
+\c shoestore_dev;
+
 INSERT INTO shoes (brand, name, image_url, price, size, gender) VALUES
 ('Nike', 'Air Jordan 1 Mid', 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0d9e485f-bc09-4686-a53b-87afd15968ee/air-jordan-1-mid-shoe-nwV1GK.png', 125, 6, 'M'),
 ('Adidas', 'NMD_R1 PRIMEBLUE SHOES', 'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/62d96641e799450fbbdfad0800cb06ed_9366/nmd_r1-primeblue-shoes.jpg', 140, 10, 'W'),

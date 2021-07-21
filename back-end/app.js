@@ -18,11 +18,11 @@ app.get("/", (req, res) => {
 // REMOVE AFTER SUCCESSFUL DEPLOYMENT
 /////////////////////////////////////
 //tetsting
-const db = require("./db/dbConfig.js");
+const db = require("./db/dbConfig");
 
-app.get("/test", async (req, res) => {
+app.get("/shoes", async (req, res) => {
   try {
-    const allDays = await db.any("SELECT * FROM test");
+    const allDays = await db.any("SELECT * FROM shoes");
     res.json(allDays);
   } catch (err) {
     res.json(err);

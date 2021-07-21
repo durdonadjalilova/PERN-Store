@@ -1,7 +1,8 @@
-DROP DATABASE IF EXISTS shoeStore_dev;
-CREATE DATABASE shoeStore_dev;
+DROP DATABASE IF EXISTS shoestore_dev;
+CREATE DATABASE shoestore_dev;
 
-\c shoeStore_dev;
+\c shoestore_dev;
+DROP TABLE IF EXISTS shoes;
 
 CREATE TABLE shoes (
     id SERIAL PRIMARY KEY, 
