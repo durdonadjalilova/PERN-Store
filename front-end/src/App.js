@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
+import New from "./Pages/New";
 import './App.css'
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route exact path="/shoes">
           <Index />
+        </Route>
+        <Route path="/shoes/new">
+          <New />
         </Route>
       </Switch>
     </div>
