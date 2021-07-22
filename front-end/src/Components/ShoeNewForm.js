@@ -6,20 +6,20 @@ import { apiURL } from "../util/apiURL";
 const API = apiURL();
 
 export default function ShoeNewForm() {
-  const [shoe, setShoe] = useState({
+  const [newShoe, setNewShoe] = useState({
     brand: "",
     name: "",
-    image: "",
+    image_url: "",
     price: 0,
     size: 0,
-    gender: "",
+    gender: ""
   });
 
   let history = useHistory();
 
-  const createShoe = async (newShoe) => {
+  const createShoe = async (shoe) => {
     try {
-      await axios.post(`${API}/shoes`, newShoe);
+      await axios.post(`${API}/shoes`, shoe);
       // setShoe([...shoe, result.data]);
       // console.log(result);
       // console.log(setShoe);
@@ -30,12 +30,12 @@ export default function ShoeNewForm() {
   };
 
   const handleChange = (e) => {
-    setShoe({ ...shoe, [e.target.id]: e.target.value });
+    setNewShoe({ ...newShoe, [e.target.id]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createShoe(shoe);
+    createShoe(newShoe);
     // debugger
   };
 
@@ -49,52 +49,45 @@ export default function ShoeNewForm() {
         <input
           id="brand"
           type="text"
-          value={shoe.brand}
+          value={newShoe.brand}
           onChange={handleChange}
           placeholder="Enter a brand..."
           required
-        ></input>
+        />
         <label htmlFor="name">Name:</label>
         <input
           id="name"
           type="text"
-          value={shoe.name}
+          value={newShoe.name}
           onChange={handleChange}
           placeholder="What's the style?"
           required
-        ></input>
-        <label htmlFor="image">Image:</label>
-        <input
-          id="image"
-          type="text"
-          value={shoe.image}
-          onChange={handleChange}
-          placeholder="Enter a URL"
-          required
-        ></input>
+        />
+        <label htmlFor="image_url">Image:</label>
+        <input type="text" id="image_url " alt="Login" placeholder="Image Link"/>
         <label htmlFor="price">Price:</label>
         <input
           id="price"
           type="number"
-          value={shoe.price}
+          value={newShoe.price}
           onChange={handleChange}
           required
-        ></input>
+        />
         <label htmlFor="size">Size:</label>
         <input
           id="size"
           type="number"
-          value={shoe.size}
+          value={newShoe.size}
           onChange={handleChange}
           required
-        ></input>
+        />
         <label htmlFor="gender">Gender:</label>
         <input
           id="gender"
           type="text"
-          value={shoe.gender}
+          value={newShoe.gender}
           onChange={handleChange}
-        ></input>
+        />
         <br />
         <button type="submit">Submit</button>
       </form>
