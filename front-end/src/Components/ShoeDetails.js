@@ -6,13 +6,10 @@ import { apiURL } from "../util/apiURL";
 
 const API = apiURL();
 
-
 function ShoeDetails() {
   let [selectedShoe, setSelectedShoe] = useState({});
   let { id } = useParams();
   let history = useHistory();
-
-
 
   const deleteShoe = async (id) => {
     try {
@@ -45,9 +42,13 @@ function ShoeDetails() {
 
   const { brand, name, image_url, price, size, gender } = selectedShoe;
 
-  return <div>
+  return (
+    <div>
       <Link to={"/shoes"}>
-          <button>BACK</button>
+        <button>BACK</button>
+      </Link>
+      <Link to={`/shoes/${id}/edit`}>
+        <button>EDIT</button>
       </Link>
       <button onClick={handleDelete}>DELETE</button>
       <br></br>
@@ -57,7 +58,8 @@ function ShoeDetails() {
       <p>Price: {price}</p>
       <p>Size: {size}</p>
       <p>Gender: {gender}</p>
-  </div>;
+    </div>
+  );
 }
 
 export default ShoeDetails;

@@ -1,5 +1,5 @@
-import { useState } from "react";
 import axios from "axios";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
 
@@ -9,7 +9,7 @@ export default function ShoeNewForm() {
   const [shoe, setShoe] = useState({
     brand: "",
     name: "",
-    image: "",
+    image_url: "",
     price: 0,
     size: 0,
     gender: "",
@@ -20,9 +20,6 @@ export default function ShoeNewForm() {
   const createShoe = async (newShoe) => {
     try {
       await axios.post(`${API}/shoes`, newShoe);
-      // setShoe([...shoe, result.data]);
-      // console.log(result);
-      // console.log(setShoe);
       history.push("/shoes");
     } catch (error) {
       console.log(error);
@@ -36,8 +33,9 @@ export default function ShoeNewForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     createShoe(shoe);
-    // debugger
   };
+
+  const { brand, name, image_url, price, size, gender } = shoe;
 
   return (
     <div>
@@ -46,7 +44,7 @@ export default function ShoeNewForm() {
         <input
           id="brand"
           type="text"
-          value={shoe.brand}
+          value={brand}
           onChange={handleChange}
           placeholder="Enter a brand..."
           required
@@ -55,16 +53,16 @@ export default function ShoeNewForm() {
         <input
           id="name"
           type="text"
-          value={shoe.name}
+          value={name}
           onChange={handleChange}
           placeholder="What's the style?"
           required
         ></input>
-        <label htmlFor="image">Image:</label>
+        <label htmlFor="image_url">Image:</label>
         <input
-          id="image"
+          id="image_url"
           type="text"
-          value={shoe.image}
+          value={image_url}
           onChange={handleChange}
           placeholder="Enter a URL"
           required
@@ -73,7 +71,7 @@ export default function ShoeNewForm() {
         <input
           id="price"
           type="number"
-          value={shoe.price}
+          value={price}
           onChange={handleChange}
           required
         ></input>
@@ -81,7 +79,7 @@ export default function ShoeNewForm() {
         <input
           id="size"
           type="number"
-          value={shoe.size}
+          value={size}
           onChange={handleChange}
           required
         ></input>
@@ -89,7 +87,7 @@ export default function ShoeNewForm() {
         <input
           id="gender"
           type="text"
-          value={shoe.gender}
+          value={gender}
           onChange={handleChange}
         ></input>
         <button type="submit">Submit</button>
