@@ -1,9 +1,13 @@
-import ShoesNewForm from "../Components/ShoeNewForm"
 
-export default function New() {
-    return (
-        <div>
-            <ShoesNewForm />
-        </div>
-    )
+import ShoeNewForm from "../Components/ShoeNewForm";
+
+function New() {
+  return (
+    <div>
+      <ShoeNewForm />
+    </div>
+  );
 }
+
+export default New;
+
