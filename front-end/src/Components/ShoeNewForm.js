@@ -28,7 +28,7 @@ export default function ShoeNewForm() {
       console.log(error);
     }
   };
-  
+
   const handleChange = (e) => {
     setShoe({ ...shoe, [e.target.id]: e.target.value });
   };
@@ -41,7 +41,10 @@ export default function ShoeNewForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        className="d-flex align-items-center justify-content-center bd-highlight flex-column text-center mb-2"
+      >
         <label htmlFor="brand">Brand:</label>
         <input
           id="brand"
@@ -92,6 +95,7 @@ export default function ShoeNewForm() {
           value={shoe.gender}
           onChange={handleChange}
         ></input>
+        <br />
         <button type="submit">Submit</button>
       </form>
     </div>
