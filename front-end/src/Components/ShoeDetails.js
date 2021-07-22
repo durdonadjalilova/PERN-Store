@@ -44,6 +44,7 @@ function ShoeDetails() {
 
   return (
     <div>
+
       <div className="d-flex align-items-center justify-content-center bd-highlight flex-column mb-2 ">
         <p>Brand: {brand} </p>
         <p>Name: {name}</p>
@@ -60,7 +61,11 @@ function ShoeDetails() {
         <button onClick={handleDelete} className="mx-2 btn btn-outline-dark btn-warning text-white btn-sm">
           DELETE
         </button>
+      <Link to={`/shoes/${id}/edit`}>
+        <button>EDIT</button>
+      </Link>
       </div>
+
     </div>
   );
 }
