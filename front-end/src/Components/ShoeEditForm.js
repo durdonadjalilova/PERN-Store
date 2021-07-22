@@ -21,7 +21,7 @@ export default function ShoeEditForm() {
   const updateShoe = async (updatedShoe) => {
     try {
       await axios.put(`${API}/shoes/${id}`, updatedShoe);
-      history.push(`shoes/${id}`);
+      history.push(`/shoes/${id}`);
     } catch (error) {
       console.log(error);
     }
@@ -33,7 +33,7 @@ export default function ShoeEditForm() {
 
   useEffect(() => {
     axios.get(`${API}/shoes/${id}`).then(
-      (response) => setShoe(response.data),
+      (response) => setShoe(response.data.payload),
       (error) => history.push(`/not-found`)
     );
   }, [id, history]);
