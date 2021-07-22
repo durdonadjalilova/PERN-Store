@@ -44,20 +44,28 @@ function ShoeDetails() {
 
   return (
     <div>
-      <Link to={"/shoes"}>
-        <button>BACK</button>
-      </Link>
+
+      <div className="d-flex align-items-center justify-content-center bd-highlight flex-column mb-2 ">
+        <p>Brand: {brand} </p>
+        <p>Name: {name}</p>
+        <img src={image_url} alt="shoe" />
+        <p>Price: {price}</p>
+        <p>Size: {size}</p>
+        <p>Gender: {gender}</p>
+        <br />
+      </div>
+      <div className="d-flex align-items-center justify-content-center bd-highlight flex-row mb-2" >
+        <Link to={"/shoes"}>
+          <button className="mx-2 btn btn-outline-dark btn-secondary text-white btn-sm ">BACK</button>
+        </Link>
+        <button onClick={handleDelete} className="mx-2 btn btn-outline-dark btn-warning text-white btn-sm">
+          DELETE
+        </button>
       <Link to={`/shoes/${id}/edit`}>
         <button>EDIT</button>
       </Link>
-      <button onClick={handleDelete}>DELETE</button>
-      <br></br>
-      <p>Brand: {brand} </p>
-      <p>Name: {name}</p>
-      <img src={image_url} alt="shoe" />
-      <p>Price: {price}</p>
-      <p>Size: {size}</p>
-      <p>Gender: {gender}</p>
+      </div>
+
     </div>
   );
 }

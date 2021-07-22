@@ -39,7 +39,8 @@ export default function ShoeNewForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}
+      className="d-flex align-items-center justify-content-center bd-highlight flex-column text-center mb-2">
         <label htmlFor="brand">Brand:</label>
         <input
           id="brand"
