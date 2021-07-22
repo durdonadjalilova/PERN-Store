@@ -1,3 +1,4 @@
+
 import ShoeNewForm from "../Components/ShoeNewForm";
 
 function New() {
@@ -9,3 +10,4 @@ function New() {
 }
 
 export default New;
+
