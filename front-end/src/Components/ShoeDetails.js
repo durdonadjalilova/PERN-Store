@@ -44,28 +44,35 @@ function ShoeDetails() {
 
   return (
     <div>
-
-      <div className="d-flex align-items-center justify-content-center bd-highlight flex-column mb-2 ">
-        <p>Brand: {brand} </p>
-        <p>Name: {name}</p>
-        <img src={image_url} alt="shoe" />
-        <p>Price: {price}</p>
-        <p>Size: {size}</p>
-        <p>Gender: {gender}</p>
+      <div className="d-flex align-items-center justify-content-center bd-highlight flex-column mb-2">
+        <h5 className="mt-5 text-white">Brand: {brand} </h5>
+        <h5 className="text-white">Name: {name}</h5>
+        <img
+          src={image_url}
+          alt="shoe"
+          className="img-fluid img-thumbnail mt-2"
+        />
+        <h6 className="mt-3 text-white">Price: {price}</h6>
+        <h6 className="mt-1 text-white">Size: {size}</h6>
+        <h6 className="mt-1 text-white">Gender: {gender}</h6>
         <br />
       </div>
-      <div className="d-flex align-items-center justify-content-center bd-highlight flex-row mb-2" >
+      <div className="d-flex align-items-center justify-content-center bd-highlight flex-row mb-2">
         <Link to={"/shoes"}>
-          <button className="mx-2 btn btn-outline-dark btn-secondary text-white btn-sm ">BACK</button>
+          <button className="mx-1 bg-dark text-white">
+            BACK
+          </button>
         </Link>
-        <button onClick={handleDelete} className="mx-2 btn btn-outline-dark btn-warning text-white btn-sm">
+        <button
+          onClick={handleDelete}
+          className="mx-1 bg-dark text-white"
+        >
           DELETE
         </button>
-      <Link to={`/shoes/${id}/edit`}>
-        <button>EDIT</button>
-      </Link>
+        <Link to={`/shoes/${id}/edit`}>
+          <button className="mx-1 bg-dark text-white">EDIT</button>
+        </Link>
       </div>
-
     </div>
   );
 }

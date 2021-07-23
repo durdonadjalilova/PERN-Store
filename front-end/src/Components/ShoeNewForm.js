@@ -25,7 +25,7 @@ export default function ShoeNewForm() {
       console.log(error);
     }
   };
-  
+
   const handleChange = (e) => {
     setShoe({ ...shoe, [e.target.id]: e.target.value });
   };
@@ -39,9 +39,13 @@ export default function ShoeNewForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}
-      className="d-flex align-items-center justify-content-center bd-highlight flex-column text-center mb-2">
-        <label htmlFor="brand">Brand:</label>
+      <form
+        onSubmit={handleSubmit}
+        className="d-flex align-items-center justify-content-center bd-highlight flex-column text-center mb-2"
+      >
+        <label htmlFor="brand" className="text-white mt-4">
+          Brand:
+        </label>
         <input
           id="brand"
           type="text"
@@ -50,7 +54,9 @@ export default function ShoeNewForm() {
           placeholder="Enter a brand..."
           required
         ></input>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name" className="text-white mt-2">
+          Name:
+        </label>
         <input
           id="name"
           type="text"
@@ -59,7 +65,9 @@ export default function ShoeNewForm() {
           placeholder="What's the style?"
           required
         ></input>
-        <label htmlFor="image_url">Image:</label>
+        <label htmlFor="image_url" className="text-white mt-2">
+          Image:
+        </label>
         <input
           id="image_url"
           type="text"
@@ -68,7 +76,9 @@ export default function ShoeNewForm() {
           placeholder="Enter a URL"
           required
         ></input>
-        <label htmlFor="price">Price:</label>
+        <label htmlFor="price" className="text-white mt-2">
+          Price:
+        </label>
         <input
           id="price"
           type="number"
@@ -76,7 +86,9 @@ export default function ShoeNewForm() {
           onChange={handleChange}
           required
         ></input>
-        <label htmlFor="size">Size:</label>
+        <label htmlFor="size" className="text-white mt-2">
+          Size:
+        </label>
         <input
           id="size"
           type="number"
@@ -84,14 +96,18 @@ export default function ShoeNewForm() {
           onChange={handleChange}
           required
         ></input>
-        <label htmlFor="gender">Gender:</label>
+        <label htmlFor="gender" className="text-white mt-2">
+          Gender:
+        </label>
         <input
           id="gender"
           type="text"
           value={gender}
           onChange={handleChange}
         ></input>
-        <button type="submit">Submit</button>
+        <button type="submit" className="bg-dark text-white mt-2">
+          Submit
+        </button>
       </form>
     </div>
   );
