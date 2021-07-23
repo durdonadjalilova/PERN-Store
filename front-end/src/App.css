@@ -33,3 +33,9 @@ img {
   margin: 50px;
   
 }
+
+#main img:hover{
+    transform: scale(1.5);
+    transition: 3s;
+}
+
