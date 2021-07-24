@@ -21,17 +21,53 @@ const Shoes = () => {
     fetchAllShoes();
   }, []);
 
-  const sortByName = () => {
+  const handleChange = (type) => {
     const newShoes = [...shoes];
+    const sortTypes = {
+      brand: "brand",
+      name: "name",
+      price: "price",
+      size: "size",
+      gender: "gender",
+    };
+
+    const sortProperty = sortTypes[type];
+
     const sorted = newShoes.sort((a, b) => {
-      return a.name.localeCompare(b.name);
+      if (
+        sortProperty === "brand" ||
+        sortProperty === "name" ||
+        sortProperty === "gender"
+      ) {
+        return a[sortProperty].localeCompare(b[sortProperty]);
+      } else if (sortProperty === "size" || sortProperty === "price") {
+        return a[sortProperty] - b[sortProperty];
+      }
     });
     setShoes(sorted);
   };
 
   return (
     <div>
-      <button onClick={() => sortByName(shoes)}>Sort by name</button>
+      Sort by{" "}
+      <select onChange={(e) => handleChange(e.target.value)}>
+        <option value="" defaultValue></option>
+        <option name="brand" value="brand">
+          brand
+        </option>
+        <option name="name" value="name">
+          name
+        </option>
+        <option name="price" value="price">
+          price
+        </option>
+        <option name="size" value="size">
+          size
+        </option>
+        <option name="gender" value="gender">
+          gender
+        </option>
+      </select>
       <ul id="ul">
         {shoes.map((shoe) => {
           const { brand, name, image_url, price, size, gender, id } = shoe;
