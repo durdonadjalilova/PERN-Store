@@ -9,6 +9,7 @@ const Home = () => {
 
   const fetchImage = async () => {
     try {
+        console.log(API)
       const res = await axios.get(`${API}/shoes`);
       setImages(res.data.payload);
     } catch (error) {
@@ -22,14 +23,14 @@ const Home = () => {
 
   return (
     <div>
-      <h2 className=" text-md-center mt-5 text-white">
+      <h2 className=" text-md-center mt-5 text-secondary ">
         Welcome To PERN Famous Footwear!
       </h2>
       {images.map((image) => {
         const { image_url, id } = image;
         return (
           <span id="main" key={id} >
-            <img src={image_url} alt="shoes" id="shoes" className="img-fluid img-thumbnail" />
+            <img src={image_url} alt="shoes" id="shoes" className="img-fluid " />
           </span>
         );
       })}

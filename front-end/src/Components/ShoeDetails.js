@@ -52,11 +52,11 @@ function ShoeDetails() {
         className="d-flex align-items-end bd-highlight flex-column"
         id="details"
       >
-        <h1 className="ml-5 text-white text-start">Brand: {brand} </h1>
-        <h4 className="mt-3 text-white">Name: {name}</h4>
-        <h5 className="mt-2 text-white">Price: ${price}</h5>
-        <h5 className="mt-2 text-white">Size: {size}</h5>
-        <h5 className="mt-2 text-white">Gender: {gender}</h5>
+        <h1 className="ml-5 text-secondary text-start">Brand: {brand} </h1>
+        <h4 className="mt-3 text-secondary">Name: {name}</h4>
+        <h5 className="mt-2 text-secondary">Price: ${price}</h5>
+        <h5 className="mt-2 text-secondary">Size: {size}</h5>
+        <h5 className="mt-2 text-secondary">Gender: {gender}</h5>
       </div>
       <div
         className="d-flex justify-content-end bd-highlight flex-row mb-2"
