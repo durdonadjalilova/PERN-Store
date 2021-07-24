@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav className="d-flex justify-content-around navbar navbar-expand-xl navbar-dark bg-dark">
-      <NavLink to="/" className="text-white navbar-brand ">
-        <h1>PERN Famous Footwear</h1>
+      <NavLink to="/" className="text-white navbar-brand " >
+        <h1 id="h1">PERN Famous Footwear</h1>
       </NavLink>
       <NavLink to="/shoes" className="text-white navbar-brand">
         <h4>Shoes</h4>
