@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
+// import stockImage from "../photos/IMG_5270.png";
+// import "../App.css"
 
 const API = apiURL();
 
@@ -47,6 +49,7 @@ export default function ShoeEditForm() {
 
   return (
     <div>
+
       <form
         onSubmit={handleSubmit}
         className="d-flex justify-content-center text-center mb-2 flex-column "
@@ -134,6 +137,7 @@ export default function ShoeEditForm() {
         <button type="submit" className="mx-4 bg-dark text-white">
           Submit
         </button>
+
         <Link to={`/shoes/${id}`}>
           <button className="bg-dark text-white">Cancel</button>
 

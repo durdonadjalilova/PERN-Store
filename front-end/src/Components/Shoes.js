@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { apiURL } from "../util/apiURL";
+import stockImage from "../photos/IMG_5270.png";
 
 const API = apiURL();
 
@@ -77,7 +78,7 @@ const Shoes = () => {
               <h5 className="mr-3 ml-3 text-secondary"> {name}</h5>
               <br />
               <img
-                src={image_url}
+                src={image_url ? image_url : stockImage}
                 alt="shoes"
                 className="img-fluid img-thumbnail"
               />

@@ -30,6 +30,14 @@ export default function ShoeNewForm() {
     setShoe({ ...shoe, [e.target.id]: e.target.value });
   };
 
+  // const handleImage = (e) => {
+  //   if (e.target.value === "") {
+  //     setShoe({ ...shoe, [e.target.id]: shoeImage });
+  //   } else {
+  //     setShoe({ ...shoe, [e.target.id]: e.target.value });
+  //   }
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     createShoe(shoe);
@@ -44,6 +52,7 @@ export default function ShoeNewForm() {
         className="d-flex justify-content-center text-center mb-2 flex-column "
         id="editForm"
       >
+
 
         <div className="form-column">
           <div className="form-group col-md-5">

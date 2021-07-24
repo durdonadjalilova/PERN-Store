@@ -3,6 +3,8 @@ import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
+import stockImage from "../photos/IMG_5270.png";
+
 
 const API = apiURL();
 
@@ -44,7 +46,14 @@ function ShoeDetails() {
 
   return (
     <div>
-      <div>
+
+      <div className="d-flex align-items-center justify-content-center bd-highlight flex-column mb-2 ">
+        <p>Brand: {brand} </p>
+        <p>Name: {name}</p>
+        <img src={image_url ? image_url : stockImage} alt="shoe" />
+        <p>Price: {price}</p>
+        <p>Size: {size}</p>
+        <p>Gender: {gender}</p>
         <br />
         <img src={image_url} alt="shoe" className="img-fluid" id="shoeDetail" />
       </div>
