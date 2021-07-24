@@ -80,6 +80,7 @@ export default function ShoeEditForm() {
           id="price"
           type="number"
           value={price}
+          min="1"
           onChange={handleChange}
         ></input>
         <label htmlFor="size">Size:</label>
@@ -87,6 +88,8 @@ export default function ShoeEditForm() {
           id="size"
           type="number"
           value={size}
+          min="6"
+          max="13"
           onChange={handleChange}
         ></input>
         <label htmlFor="gender">Gender:</label>
@@ -94,11 +97,12 @@ export default function ShoeEditForm() {
           id="gender"
           type="text"
           value={gender}
+          placeholder="M, W or UNI"
           onChange={handleChange}
         ></input>
         <button type="submit">Submit</button>
         <Link to={`/shoes/${id}`}>
-          <button>Nevermind!</button>
+          <button>Cancel</button>
         </Link>
       </form>
     </div>

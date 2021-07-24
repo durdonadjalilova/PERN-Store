@@ -2,10 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
-import stockImage from "../photos/IMG_5270.png";
 
 const API = apiURL();
-const shoeImage = stockImage;
 
 export default function ShoeNewForm() {
   const [shoe, setShoe] = useState({
@@ -53,7 +51,9 @@ export default function ShoeNewForm() {
         onSubmit={handleSubmit}
         className="d-flex align-items-center justify-content-center bd-highlight flex-column text-center mb-2"
       >
-        <label htmlFor="brand">Brand:</label>
+        <label htmlFor="brand" className="text-white mt-4">
+          Brand:
+        </label>
         <input
           id="brand"
           type="text"
@@ -62,7 +62,9 @@ export default function ShoeNewForm() {
           placeholder="Enter a brand..."
           required
         ></input>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name" className="text-white mt-2">
+          Name:
+        </label>
         <input
           id="name"
           type="text"
@@ -71,7 +73,9 @@ export default function ShoeNewForm() {
           placeholder="What's the style?"
           required
         ></input>
-        <label htmlFor="image_url">Image:</label>
+        <label htmlFor="image_url" className="text-white mt-2">
+          Image:
+        </label>
         <input
           id="image_url"
           type="text"
@@ -81,30 +85,42 @@ export default function ShoeNewForm() {
           onChange={handleChange}
           placeholder="Enter a URL"
         ></input>
-        <label htmlFor="price">Price:</label>
+        <label htmlFor="price" className="text-white mt-2">
+          Price:
+        </label>
         <input
           id="price"
           type="number"
           value={price}
+          min="1"
           onChange={handleChange}
           required
         ></input>
-        <label htmlFor="size">Size:</label>
+        <label htmlFor="size" className="text-white mt-2">
+          Size:
+        </label>
         <input
           id="size"
           type="number"
           value={size}
+          min="6"
+          max="13"
           onChange={handleChange}
           required
         ></input>
-        <label htmlFor="gender">Gender:</label>
+        <label htmlFor="gender" className="text-white mt-2">
+          Gender:
+        </label>
         <input
           id="gender"
           type="text"
           value={gender}
+          placeholder="M, W or UNI"
           onChange={handleChange}
         ></input>
-        <button type="submit">Submit</button>
+        <button type="submit" className="bg-dark text-white mt-2">
+          Submit
+        </button>
       </form>
     </div>
   );

@@ -21,15 +21,61 @@ const Shoes = () => {
   useEffect(() => {
     fetchAllShoes();
   }, []);
+
+  const handleChange = (type) => {
+    const newShoes = [...shoes];
+    const sortTypes = {
+      brand: "brand",
+      name: "name",
+      price: "price",
+      size: "size",
+      gender: "gender",
+    };
+
+    const sortProperty = sortTypes[type];
+
+    const sorted = newShoes.sort((a, b) => {
+      if (
+        sortProperty === "brand" ||
+        sortProperty === "name" ||
+        sortProperty === "gender"
+      ) {
+        return a[sortProperty].localeCompare(b[sortProperty]);
+      } else if (sortProperty === "size" || sortProperty === "price") {
+        return a[sortProperty] - b[sortProperty];
+      }
+    });
+    setShoes(sorted);
+  };
+
   return (
     <div>
-      <ul>
+      Sort by{" "}
+      <select onChange={(e) => handleChange(e.target.value)}>
+        <option value="" defaultValue></option>
+        <option name="brand" value="brand">
+          brand
+        </option>
+        <option name="name" value="name">
+          name
+        </option>
+        <option name="price" value="price">
+          price
+        </option>
+        <option name="size" value="size">
+          size
+        </option>
+        <option name="gender" value="gender">
+          gender
+        </option>
+      </select>
+      <ul id="ul">
         {shoes.map((shoe) => {
           const { brand, name, image_url, price, size, gender, id } = shoe;
           return (
             <li key={id} className="list-group">
-              <h3>{brand}</h3>
-              <h3>{name}</h3>
+              <h5 className="mt-3 text-white">{brand}</h5>
+              <h5 className="mr-3 ml-3 text-white"> {name}</h5>
               <br />
               <img
                 src={image_url ? image_url : stockImage}
@@ -37,11 +83,11 @@ const Shoes = () => {
                 className="img-fluid img-thumbnail"
               />
               <br />
-              <h4>${price}</h4>
-              <h4>Size: {size}</h4>
-              <h4>Gender: {gender}</h4>
+              <h6 className="text-white">${price}</h6>
+              <h6 className="text-white">Size: {size}</h6>
+              <h6 className="text-white">Gender: {gender}</h6>
               <Link to={`/shoes/${id}`}>
-                <button>Details</button>
+                <button className="bg-dark text-white">Details</button>
               </Link>
               <br />
             </li>
