@@ -83,6 +83,7 @@ export default function ShoeNewForm() {
           id="price"
           type="number"
           value={price}
+          min="1"
           onChange={handleChange}
           required
         ></input>
@@ -93,6 +94,8 @@ export default function ShoeNewForm() {
           id="size"
           type="number"
           value={size}
+          min="6"
+          max="13"
           onChange={handleChange}
           required
         ></input>
@@ -103,6 +106,7 @@ export default function ShoeNewForm() {
           id="gender"
           type="text"
           value={gender}
+          placeholder="M, W or UNI"
           onChange={handleChange}
         ></input>
         <button type="submit" className="bg-dark text-white mt-2">

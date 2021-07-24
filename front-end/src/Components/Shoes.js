@@ -20,8 +20,18 @@ const Shoes = () => {
   useEffect(() => {
     fetchAllShoes();
   }, []);
+
+  const sortByName = () => {
+    const newShoes = [...shoes];
+    const sorted = newShoes.sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+    setShoes(sorted);
+  };
+
   return (
     <div>
+      <button onClick={() => sortByName(shoes)}>Sort by name</button>
       <ul id="ul">
         {shoes.map((shoe) => {
           const { brand, name, image_url, price, size, gender, id } = shoe;
