@@ -22,13 +22,13 @@ const Shoes = () => {
   }, []);
   return (
     <div>
-      <ul>
+      <ul id="ul">
         {shoes.map((shoe) => {
           const { brand, name, image_url, price, size, gender, id } = shoe;
           return (
             <li key={id} className="list-group">
-              <h3>{brand}</h3>
-              <h3>{name}</h3>
+              <h5 className="mt-3 text-white">{brand}</h5>
+              <h5 className="mr-3 ml-3 text-white"> {name}</h5>
               <br />
               <img
                 src={image_url}
@@ -36,11 +36,11 @@ const Shoes = () => {
                 className="img-fluid img-thumbnail"
               />
               <br />
-              <h4>${price}</h4>
-              <h4>Size: {size}</h4>
-              <h4>Gender: {gender}</h4>
+              <h6 className="text-white">${price}</h6>
+              <h6 className="text-white">Size: {size}</h6>
+              <h6 className="text-white">Gender: {gender}</h6>
               <Link to={`/shoes/${id}`}>
-                <button>Details</button>
+                <button className="bg-dark text-white">Details</button>
               </Link>
               <br />
             </li>
