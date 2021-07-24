@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(204, 198, 198);
+  background-color: rgb(209, 207, 207);
 }
 
 ul {
@@ -31,43 +31,133 @@ img {
   height: 160px;
   width: 160px;
   margin: 50px;
-  
 }
 
-#main img:hover{
-    transform: scale(1.5);
-    transition: 3s;
+#main img:hover {
+  transform: scale(1.5);
+  transition: 3s;
 }
 
-#details{
-    margin-right: 250px;
-    margin-top: -320px;
-    font-weight: bold;
-    text-align: left;
+#details {
+  margin-right: 250px;
+  margin-top: -320px;
+  font-weight: bold;
+  text-align: left;
 }
 
-#buttons{
-    margin-top: 40px;
-    margin-right: 250px;
+#buttons {
+  margin-top: 40px;
+  margin-right: 250px;
 }
-#shoeDetail{
-    height: 320px;
-    width: 365px;
-    margin-left: 320px;
-    margin-top: 30px;
+#shoeDetail {
+  height: 320px;
+  width: 365px;
+  margin-left: 320px;
+  margin-top: 30px;
 }
 
-#editForm{
-    font-weight: bold;
-    margin-left: 520px;
-    margin-top: 30px;
+#editForm {
+  font-weight: bold;
+  margin-left: 520px;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+#editForm2 {
+  margin-left: 100px;
+}
+
+#newFormButton {
+  margin-right: 510px;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    width: 350px;
+  }
+  #h1 {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  #homepage {
+    text-align: center;
+    margin-left: 50px;
     font-size: 18px;
+    margin-right: 45px;
+  }
+  #main img {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    margin-left: 35px;
+  }
 }
 
-#editForm2{
-    margin-left: 100px;
+@media only screen and (max-width: 1400px) {
+  nav {
+    width: 400px;
+  }
+  #h1 {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  #homepage {
+    text-align: center;
+    margin-left: 50px;
+    font-size: 18px;
+    margin-right: 45px;
+  }
+  #main img {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    margin-left: 40px;
+  }
 }
 
-#newFormButton{
-    margin-right: 510px;
+@media only screen and (min-width: 400px) {
+  nav {
+    width: 450px;
+  }
+  #h1 {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  #homepage {
+    text-align: center;
+    margin-left: 50px;
+    font-size: 18px;
+    margin-right: 45px;
+  }
+  #main img {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    margin-left: 55px;
+  }
 }
+
+
+
+@media only screen and (min-width: 750px) {
+    nav {
+      width: 800px;
+    }
+    #h1 {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+    #homepage {
+      text-align: center;
+      margin-left: 50px;
+      font-size: 25px;
+      margin-right: 45px;
+    }
+    #main img {
+      height: 80px;
+      width: 80px;
+      margin: 5px;
+      margin-left: 55px;
+      margin-top: 30px;
+    }
+  }

@@ -1,39 +1,73 @@
 import React from "react";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import { apiURL } from "../util/apiURL";
-const API = apiURL();
 
 const Home = () => {
-  const [images, setImages] = useState([]);
-
-  const fetchImage = async () => {
-    try {
-        console.log(API)
-      const res = await axios.get(`${API}/shoes`);
-      setImages(res.data.payload);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchImage();
-  }, []);
-
   return (
     <div>
-      <h2 className=" text-md-center mt-5 text-secondary ">
+      <h2 className=" text-md-center mt-5 text-secondary " id="homepage">
         Welcome To PERN Famous Footwear!
       </h2>
-      {images.map((image) => {
-        const { image_url, id } = image;
-        return (
-          <span id="main" key={id} >
-            <img src={image_url} alt="shoes" id="shoes" className="img-fluid " />
-          </span>
-        );
-      })}
+      <span id="main">
+        <img
+          src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0d9e485f-bc09-4686-a53b-87afd15968ee/air-jordan-1-mid-shoe-nwV1GK.png"
+          alt="Nike"
+        />
+        <img
+          src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/62d96641e799450fbbdfad0800cb06ed_9366/nmd_r1-primeblue-shoes.jpg"
+          alt="Nike"
+        />
+        <img
+          src="https://images.vans.com/is/image/Vans/EYEBWW-HERO?$583x583$"
+          alt="Nike"
+        />
+        <img
+          src="https://images.timberland.com/is/image/timberland/10061024-HERO?$496x496$"
+          alt="Nike"
+        />
+        <img
+          src="https://media.gucci.com/style/DarkGray_South_0_160_470x470/1623087013/661301_2SH80_9062_001_100_0000_Light-Mens-Gucci-Basket-sneaker.jpg"
+          alt="Nike"
+        />
+        <img
+          src="https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw715ee540/images/e_08/171545C_E_08X1.jpg?sw=406"
+          alt="Nike"
+        />
+        <img
+          src="https://assets.reebok.com/images/w_766,h_766,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/94b58f6f42004f03949faa99017b30fb_9366/club-c-85-vintage-mens-shoes.jpg"
+          alt="Nike"
+        />
+        <img
+          src="https://i1.adis.ws/i/drmartens/15265001.80.jpg?$medium$"
+          alt="Nike"
+        />
+        <img
+          src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-3861ea78-44bd-44cd-9be0-ed185d75143e/blazer-mid-77-vintage-womens-shoes-25h71W.png"
+          alt="Nike"
+        />
+        <img
+          src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-ultimate-pump--ALUE3JSC02_PM2_Front%20view.png?wid=656&hei=656"
+          alt="Nike"
+        />
+        <img
+          src="https://balenciaga.dam.kering.com/m/433a1165b763d194/Large-524036W2CA19000_F.jpg?v=4"
+          alt="Nike"
+        />
+        <img
+          src="https://image.goat.com/crop/750/attachments/product_template_additional_pictures/images/008/492/440/original/94407_01.jpg.jpeg?1513117674"
+          alt="Nike"
+        />
+        <img
+          src="https://www.birkenstock.com/dw/image/v2/BDXC_PRD/on/demandware.static/-/Sites-master-catalog/default/dwcea19d44/951303/951303.jpg?sw=848&sh=848"
+          alt="Nike"
+        />
+        <img
+          src="https://nb.scene7.com/is/image/NB/ml574aa2_nb_02_i?$pdpflexf2$&wid=440&hei=440"
+          alt="Nike"
+        />
+        <img
+          src="https://www.skechers.com/dw/image/v2/BDCN_PRD/on/demandware.static/-/Sites-skechers-master/default/dw69f38721/images/large/124402_NVY.jpg?sw=800"
+          alt="Nike"
+        />
+      </span>
     </div>
   );
 };
