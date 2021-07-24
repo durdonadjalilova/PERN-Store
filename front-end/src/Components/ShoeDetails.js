@@ -44,29 +44,28 @@ function ShoeDetails() {
 
   return (
     <div>
-      <div className="d-flex align-items-center justify-content-center bd-highlight flex-column mb-2">
-        <h5 className="mt-5 text-white">Brand: {brand} </h5>
-        <h5 className="text-white">Name: {name}</h5>
-        <img
-          src={image_url}
-          alt="shoe"
-          className="img-fluid img-thumbnail mt-2"
-        />
-        <h6 className="mt-3 text-white">Price: {price}</h6>
-        <h6 className="mt-1 text-white">Size: {size}</h6>
-        <h6 className="mt-1 text-white">Gender: {gender}</h6>
+      <div>
         <br />
+        <img src={image_url} alt="shoe" className="img-fluid" id="shoeDetail" />
       </div>
-      <div className="d-flex align-items-center justify-content-center bd-highlight flex-row mb-2">
+      <div
+        className="d-flex align-items-end bd-highlight flex-column"
+        id="details"
+      >
+        <h1 className="ml-5 text-white text-start">Brand: {brand} </h1>
+        <h4 className="mt-3 text-white">Name: {name}</h4>
+        <h5 className="mt-2 text-white">Price: ${price}</h5>
+        <h5 className="mt-2 text-white">Size: {size}</h5>
+        <h5 className="mt-2 text-white">Gender: {gender}</h5>
+      </div>
+      <div
+        className="d-flex justify-content-end bd-highlight flex-row mb-2"
+        id="buttons"
+      >
         <Link to={"/shoes"}>
-          <button className="mx-1 bg-dark text-white">
-            BACK
-          </button>
+          <button className="mx-1 bg-dark text-white">BACK</button>
         </Link>
-        <button
-          onClick={handleDelete}
-          className="mx-1 bg-dark text-white"
-        >
+        <button onClick={handleDelete} className="mx-1 bg-dark text-white">
           DELETE
         </button>
         <Link to={`/shoes/${id}/edit`}>

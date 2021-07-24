@@ -39,3 +39,20 @@ img {
     transition: 3s;
 }
 
+#details{
+    margin-right: 250px;
+    margin-top: -320px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#buttons{
+    margin-top: 40px;
+    margin-right: 250px;
+}
+#shoeDetail{
+    height: 320px;
+    width: 365px;
+    margin-left: 320px;
+    margin-top: 30px;
+}
