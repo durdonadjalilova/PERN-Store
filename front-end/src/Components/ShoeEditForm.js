@@ -34,11 +34,20 @@ export default function ShoeEditForm() {
   };
 
   useEffect(() => {
-    axios.get(`${API}/shoes/${id}`).then(
-      (response) => setShoe(response.data.payload),
-      (error) => history.push(`/not-found`)
-    );
-  }, [id, history]);
+    const fetchShoe = async () => {
+      try {
+        const res = await axios.get(`${API}/shoes/${id}`);
+        setShoe(res.data.payload);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  fetchShoe()
+    // axios.get(`${API}/shoes/${id}`).then(
+    //   (response) => setShoe(response.data.payload),
+    //   (error) => history.push(`/404`)
+    // );
+  }, [id]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -132,7 +141,6 @@ export default function ShoeEditForm() {
             onChange={handleChange}
           />
         </div>
-      </form>
       <div className="d-flex justify-content-center bd-highlight flex-row mb-2">
         <button type="submit" className="mx-4 bg-dark text-white">
           Submit
@@ -143,6 +151,7 @@ export default function ShoeEditForm() {
 
         </Link>
       </div>
+      </form>
     </div>
   );
 }

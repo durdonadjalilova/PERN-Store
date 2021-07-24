@@ -46,16 +46,8 @@ function ShoeDetails() {
 
   return (
     <div>
-
-      <div className="d-flex align-items-center justify-content-center bd-highlight flex-column mb-2 ">
-        <p>Brand: {brand} </p>
-        <p>Name: {name}</p>
-        <img src={image_url ? image_url : stockImage} alt="shoe" />
-        <p>Price: {price}</p>
-        <p>Size: {size}</p>
-        <p>Gender: {gender}</p>
-        <br />
-        <img src={image_url} alt="shoe" className="img-fluid" id="shoeDetail" />
+        <div>
+        <img src={image_url ? image_url : stockImage} alt="shoe" className="img-fluid" id="shoeDetail" />
       </div>
       <div
         className="d-flex align-items-end bd-highlight flex-column"
