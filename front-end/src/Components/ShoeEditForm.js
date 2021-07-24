@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
+// import stockImage from "../photos/IMG_5270.png";
+// import "../App.css"
 
 const API = apiURL();
 
@@ -67,6 +69,7 @@ export default function ShoeEditForm() {
         <label htmlFor="image_url">Image:</label>
         <input
           id="image_url"
+          // className={image_url ? image_url : "stockImage"}
           type="text"
           value={image_url}
           onChange={handleChange}

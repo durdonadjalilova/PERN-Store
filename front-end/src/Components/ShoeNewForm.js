@@ -2,8 +2,10 @@ import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
+import stockImage from "../photos/IMG_5270.png";
 
 const API = apiURL();
+const shoeImage = stockImage;
 
 export default function ShoeNewForm() {
   const [shoe, setShoe] = useState({
@@ -25,10 +27,18 @@ export default function ShoeNewForm() {
       console.log(error);
     }
   };
-  
+
   const handleChange = (e) => {
     setShoe({ ...shoe, [e.target.id]: e.target.value });
   };
+
+  // const handleImage = (e) => {
+  //   if (e.target.value === "") {
+  //     setShoe({ ...shoe, [e.target.id]: shoeImage });
+  //   } else {
+  //     setShoe({ ...shoe, [e.target.id]: e.target.value });
+  //   }
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,8 +49,10 @@ export default function ShoeNewForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}
-      className="d-flex align-items-center justify-content-center bd-highlight flex-column text-center mb-2">
+      <form
+        onSubmit={handleSubmit}
+        className="d-flex align-items-center justify-content-center bd-highlight flex-column text-center mb-2"
+      >
         <label htmlFor="brand">Brand:</label>
         <input
           id="brand"
@@ -64,9 +76,10 @@ export default function ShoeNewForm() {
           id="image_url"
           type="text"
           value={image_url}
+          // {<img src={stockImage}/>}
+          // value={image_url ? image_url : stockImage}
           onChange={handleChange}
           placeholder="Enter a URL"
-          required
         ></input>
         <label htmlFor="price">Price:</label>
         <input

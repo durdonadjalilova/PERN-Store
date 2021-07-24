@@ -17,3 +17,7 @@ img {
   height: 150px;
   width: 150px;
 }
+
+.stockImage {
+  background: white url(./photos/IMG_5270.png) left no-repeat;
+}
