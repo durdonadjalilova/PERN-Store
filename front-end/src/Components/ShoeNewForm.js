@@ -44,6 +44,7 @@ export default function ShoeNewForm() {
         className="d-flex justify-content-center text-center mb-2 flex-column "
         id="editForm"
       >
+
         <div className="form-column">
           <div className="form-group col-md-5">
             <label htmlFor="brand" className="text-secondary">
@@ -94,6 +95,8 @@ export default function ShoeNewForm() {
             id="size"
             type="number"
             value={size}
+           min="6"
+           max="13"
             onChange={handleChange}
           />
           <label htmlFor="price" className="text-secondary">
@@ -104,6 +107,7 @@ export default function ShoeNewForm() {
             id="price"
             type="number"
             value={price}
+          min="1"
             onChange={handleChange}
           />
           <label htmlFor="gender text-white" className="text-secondary">
@@ -114,6 +118,7 @@ export default function ShoeNewForm() {
             id="gender"
             type="text"
             value={gender}
+          placeholder="M, W or UNI"
             onChange={handleChange}
           />
         </div>
@@ -122,6 +127,7 @@ export default function ShoeNewForm() {
             Submit
           </button>
         </div>
+
       </form>
     </div>
   );

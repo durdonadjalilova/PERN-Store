@@ -102,6 +102,8 @@ export default function ShoeEditForm() {
             id="size"
             type="number"
             value={size}
+            min="6"
+            max="13"
             onChange={handleChange}
           />
           <label htmlFor="price" className="text-secondary">
@@ -112,6 +114,7 @@ export default function ShoeEditForm() {
             id="price"
             type="number"
             value={price}
+            min="1"
             onChange={handleChange}
           />
           <label htmlFor="gender text-white" className="text-secondary">
@@ -122,6 +125,7 @@ export default function ShoeEditForm() {
             id="gender"
             type="text"
             value={gender}
+            placeholder="M, W or UNI"
             onChange={handleChange}
           />
         </div>
@@ -132,6 +136,7 @@ export default function ShoeEditForm() {
         </button>
         <Link to={`/shoes/${id}`}>
           <button className="bg-dark text-white">Cancel</button>
+
         </Link>
       </div>
     </div>
