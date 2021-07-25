@@ -12,6 +12,9 @@ const NavBar = () => {
       <NavLink to="/shoes/new" className="text-white navbar-brand">
         <h4>Add New Product</h4>
       </NavLink>
+      <NavLink to="/shoes/cart" className="text-white navbar-brand">
+        <h4>Shopping Cart</h4>
+      </NavLink>
     </nav>
   );
 };
