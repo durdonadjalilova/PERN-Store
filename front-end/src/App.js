@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Edit from "./Pages/Edit";
@@ -7,25 +7,26 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
-import ShowCart from "./Pages/ShowCart"
+import ShowCart from "./Pages/ShowCart";
+import { useHistory } from "react-router-dom";
 import "./App.css";
 
 function App() {
+  let history = useHistory();
 
   const [cart, setCart] = useState([]);
-  const addToCart = (shoes) =>{
-      setCart([...cart, shoes])
-  }
+  const addToCart = (shoes) => {
+    setCart([...cart, shoes]);
+    history.push(`/shoes/cart`);
+  };
 
   const removeShoes = (shoes) => {
-    const filterArr = cart.filter((item) => item.id !==shoes.id)
-    setCart(filterArr)
-}
+    const filterArr = cart.filter((item) => item.id !== shoes.id);
+    setCart(filterArr);
+  };
 
   return (
     <div className="App">
-
-      
       <Router>
         <NavBar />
         <Switch>
@@ -39,7 +40,7 @@ function App() {
             <New />
           </Route>
           <Route exact path="/shoes/cart">
-            <ShowCart cart={cart} removeShoes={removeShoes}/>
+            <ShowCart cart={cart} removeShoes={removeShoes} />
           </Route>
           <Route exact path="/shoes/:id">
             <Show addToCart={addToCart} />
