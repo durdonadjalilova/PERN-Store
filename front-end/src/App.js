@@ -19,7 +19,7 @@ function App() {
 
   const removeShoes = (shoes) => {
     const filterArr = cart.filter((item) => item.id !==shoes.id)
-    setCart({cart: filterArr})
+    setCart(filterArr)
 }
 
   return (
