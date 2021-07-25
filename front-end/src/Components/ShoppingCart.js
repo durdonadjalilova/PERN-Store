@@ -8,11 +8,11 @@ function ShoppingCart({ cart, removeShoes }) {
       <ul className="d-flex justify-content-left mb-2 flex-column">
         {cart.map((shoes) => {
           return (
-            <li key={shoes.id} className="shoppingCart text-secondary">
+            <li key={shoes.id} className="mt-5 shoppingCart text-secondary">
               {shoes.brand}
               {shoes.name}
               {shoes.price}
-              <button onClick={()=>removeShoes(shoes)} className="ml-3 bg-dark text-white">Remove shoes</button>
+              <button onClick={()=>removeShoes(shoes)} className="ml-3 bg-dark text-white">x</button>
             </li>
           );
         })}

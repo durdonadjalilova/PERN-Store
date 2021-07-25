@@ -1,13 +1,16 @@
 body {
   background-color: rgb(209, 207, 207);
 }
+
 #homepage {
   font-weight: bold;
+  text-align: center;
 }
 
 nav h4 {
   font-size: 18px;
 }
+
 ul {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -60,20 +63,15 @@ img {
 
 #buttons {
   margin-top: 40px;
-  margin-right: 250px;
+  margin-left: 30px;
+  /* margin-right: 250px; */
 }
+
 #shoeDetail {
   height: 320px;
   width: 365px;
   margin-left: 320px;
   margin-top: 30px;
-}
-
-#editForm {
-  font-weight: bold;
-  margin-left: 520px;
-  margin-top: 30px;
-  font-size: 18px;
 }
 
 #editForm2 {
@@ -95,27 +93,77 @@ img {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 650px) {
+/* media query for iPhone X */
+@media only screen and (max-width: 375px) {
   nav {
-    width: 700px;
+    width: 375px;
   }
+
   nav h4 {
     font-size: 15px;
   }
-  #h1 {
-    font-size: 20px;
-    margin-right: 10px;
+
+  input {
+    width: 200px;
   }
+
+  ul {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .list-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: solid 1px white;
+    width: 250px;
+    margin-top: 40px;
+  }
+
   #homepage {
-    margin-left: 200px;
-    font-size: 25px;
-  
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
   }
+
+  #h1 {
+    font-size: 32px;
+    text-align: center;
+    display: block;
+    margin-left: 10px;
+  }
+
   #main img {
     height: 80px;
     width: 80px;
     margin: 10px;
-    margin-left: 35px;
+    margin-left: 27px;
+  }
+
+  #new-form {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #buttons {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-left: 20px;
+    /* margin-right: 250px; */
+  }
+ 
+  #shoe-detail-brand {
+    font-size: 30px;
+  }
+  
+  #sortBy {
+    /* text-align: center; */
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-right: 100px;
   }
 }
 
