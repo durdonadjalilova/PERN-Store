@@ -1,11 +1,11 @@
-import Cart from "../Components/Cart";
+import ShoeCart from "../Components/ShoeCart";
 
-function ShowCart() {
+function Cart({cart, removeShoes}) {
   return (
     <div>
-      <Cart />
+      <ShoeCart cart={cart} removeShoes={removeShoes}/>
     </div>
   );
 }
 
-export default ShowCart;
+export default Cart;

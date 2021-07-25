@@ -1,9 +1,9 @@
 import ShoeDetails from "../Components/ShoeDetails";
 
-function Show() {
+function Show({addToCart}) {
   return (
     <div>
-      <ShoeDetails />
+      <ShoeDetails addToCart={addToCart} />
     </div>
   );
 }

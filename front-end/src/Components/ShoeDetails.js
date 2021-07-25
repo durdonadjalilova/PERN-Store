@@ -8,7 +8,7 @@ import stockImage from "../photos/IMG_5270.png";
 
 const API = apiURL();
 
-function ShoeDetails(props) {
+function ShoeDetails({addToCart}) {
   let [selectedShoe, setSelectedShoe] = useState({});
   let { id } = useParams();
   let history = useHistory();
@@ -17,7 +17,6 @@ function ShoeDetails(props) {
   const deleteShoe = async (id) => {
     try {
       let res = await axios.delete(`${API}/shoes/${id}`);
-      debugger
       setSelectedShoe(res.data.payload);
     } catch (err) {
       console.log(err);
@@ -77,7 +76,8 @@ function ShoeDetails(props) {
           <button className="mx-1 bg-dark text-white">EDIT</button>
         </Link>
         <Link to={`/shoes/cart`}>
-          <button onClick={()=>{props.addToCart(selectedShoe)}} className="mx-1 bg-dark text-white">ADD TO CART</button>
+          <button onClick={()=>{addToCart(selectedShoe)}} className="mx-1 bg-dark text-white">ADD TO CART</button>
+
         </Link>
       </div>
     </div>
