@@ -36,7 +36,6 @@ function ShoeDetails({addToCart}) {
         let res = await axios.get(`${API}/shoes/${id}`);
         console.log(res.data.payload);
         setSelectedShoe(res.data.payload);
-        debugger
       } catch (err) {
         console.log(err);
         return err;
