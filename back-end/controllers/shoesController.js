@@ -29,7 +29,6 @@ shoes.get("/:id", async (req, res) => {
 shoes.put("/:id", async (req, res) => {
   const { id } = req.params;
   const { brand, name, image_url, price, size, gender } = req.body;
-  // if (!brand || !name || !image_url || !price || !size || !gender) {
   if (!brand || !name || !price || !size || !gender) {
     res.status(422).json({
       error: true,

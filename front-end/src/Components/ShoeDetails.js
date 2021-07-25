@@ -8,14 +8,16 @@ import stockImage from "../photos/IMG_5270.png";
 
 const API = apiURL();
 
-function ShoeDetails() {
+function ShoeDetails(props) {
   let [selectedShoe, setSelectedShoe] = useState({});
   let { id } = useParams();
   let history = useHistory();
+  // const {addToCart} = props
 
   const deleteShoe = async (id) => {
     try {
       let res = await axios.delete(`${API}/shoes/${id}`);
+      debugger
       setSelectedShoe(res.data.payload);
     } catch (err) {
       console.log(err);
@@ -28,12 +30,14 @@ function ShoeDetails() {
     history.push("/shoes");
   };
 
+
   useEffect(() => {
     const fetchShoe = async () => {
       try {
         let res = await axios.get(`${API}/shoes/${id}`);
         console.log(res.data.payload);
         setSelectedShoe(res.data.payload);
+        debugger
       } catch (err) {
         console.log(err);
         return err;
@@ -71,6 +75,9 @@ function ShoeDetails() {
         </button>
         <Link to={`/shoes/${id}/edit`}>
           <button className="mx-1 bg-dark text-white">EDIT</button>
+        </Link>
+        <Link to={`/shoes/cart`}>
+          <button onClick={()=>{props.addToCart(selectedShoe)}} className="mx-1 bg-dark text-white">ADD TO CART</button>
         </Link>
       </div>
     </div>

@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
+import Cart from "./Pages/Cart"
 import "./App.css";
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/shoes/new">
             <New />
+          </Route>
+          <Route exact path="/shoes/cart">
+            <Cart />
           </Route>
           <Route exact path="/shoes/:id">
             <Show />
