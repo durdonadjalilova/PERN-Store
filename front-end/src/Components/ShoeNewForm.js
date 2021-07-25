@@ -66,6 +66,7 @@ export default function ShoeNewForm() {
               onChange={handleChange}
               id="brand"
               placeholder="Enter a brand..."
+              required
             />
           </div>
           <div className="form-group col-md-5">
@@ -79,6 +80,7 @@ export default function ShoeNewForm() {
               value={name}
               onChange={handleChange}
               placeholder="What's the style?"
+              required
             />
           </div>
         </div>
@@ -107,6 +109,7 @@ export default function ShoeNewForm() {
            min="6"
            max="13"
             onChange={handleChange}
+            required
           />
           <label htmlFor="price" className="text-secondary">
             Price:
@@ -118,6 +121,7 @@ export default function ShoeNewForm() {
             value={price}
           min="1"
             onChange={handleChange}
+            required
           />
           <label htmlFor="gender text-white" className="text-secondary">
             Gender:
@@ -129,6 +133,7 @@ export default function ShoeNewForm() {
             value={gender}
           placeholder="M, W or UNI"
             onChange={handleChange}
+            required
           />
         </div>
         <div className="d-flex justify-content-center">

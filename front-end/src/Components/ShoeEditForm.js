@@ -41,8 +41,8 @@ export default function ShoeEditForm() {
       } catch (err) {
         console.log(err);
       }
-    }
-  fetchShoe()
+    };
+    fetchShoe();
     // axios.get(`${API}/shoes/${id}`).then(
     //   (response) => setShoe(response.data.payload),
     //   (error) => history.push(`/404`)
@@ -58,7 +58,6 @@ export default function ShoeEditForm() {
 
   return (
     <div>
-
       <form
         onSubmit={handleSubmit}
         className="d-flex justify-content-center text-center mb-2 flex-column "
@@ -76,6 +75,7 @@ export default function ShoeEditForm() {
               onChange={handleChange}
               id="brand"
               placeholder="Enter a brand..."
+              required
             />
           </div>
           <div className="form-group col-md-5">
@@ -89,6 +89,7 @@ export default function ShoeEditForm() {
               value={name}
               onChange={handleChange}
               placeholder="What's the style?"
+              required
             />
           </div>
         </div>
@@ -117,6 +118,7 @@ export default function ShoeEditForm() {
             min="6"
             max="13"
             onChange={handleChange}
+            required
           />
           <label htmlFor="price" className="text-secondary">
             Price:
@@ -128,6 +130,7 @@ export default function ShoeEditForm() {
             value={price}
             min="1"
             onChange={handleChange}
+            required
           />
           <label htmlFor="gender text-white" className="text-secondary">
             Gender:
@@ -139,18 +142,18 @@ export default function ShoeEditForm() {
             value={gender}
             placeholder="M, W or UNI"
             onChange={handleChange}
+            required
           />
         </div>
-      <div className="d-flex justify-content-center bd-highlight flex-row mb-2">
-        <button type="submit" className="mx-4 bg-dark text-white">
-          Submit
-        </button>
+        <div className="d-flex justify-content-center bd-highlight flex-row mb-2">
+          <button type="submit" className="mx-4 bg-dark text-white">
+            Submit
+          </button>
 
-        <Link to={`/shoes/${id}`}>
-          <button className="bg-dark text-white">Cancel</button>
-
-        </Link>
-      </div>
+          <Link to={`/shoes/${id}`}>
+            <button className="bg-dark text-white">Cancel</button>
+          </Link>
+        </div>
       </form>
     </div>
   );

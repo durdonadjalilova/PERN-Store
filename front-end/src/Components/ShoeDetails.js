@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
 import stockImage from "../photos/IMG_5270.png";
 
-
 const API = apiURL();
 
 function ShoeDetails() {
@@ -46,8 +45,13 @@ function ShoeDetails() {
 
   return (
     <div>
-        <div>
-        <img src={image_url ? image_url : stockImage} alt="shoe" className="img-fluid" id="shoeDetail" />
+      <div>
+        <img
+          src={image_url ? image_url : stockImage}
+          alt="shoe"
+          className="img-fluid"
+          id="shoeDetail"
+        />
       </div>
       <div
         className="d-flex align-items-end bd-highlight flex-column"
