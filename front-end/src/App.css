@@ -32,7 +32,8 @@ img {
 #sortBy {
   font-weight: bold;
   font-size: 18px;
-  margin-left: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
 #main {
@@ -94,27 +95,29 @@ img {
   font-weight: bold;
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   nav {
-    width: 350px;
+    width: 700px;
+  }
+  nav h4 {
+    font-size: 15px;
   }
   #h1 {
     font-size: 20px;
     margin-right: 10px;
   }
   #homepage {
-    text-align: center;
-    margin-left: 50px;
-    font-size: 18px;
-    margin-right: 45px;
+    margin-left: 200px;
+    font-size: 25px;
+  
   }
   #main img {
-    height: 60px;
-    width: 60px;
-    margin: 5px;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
     margin-left: 35px;
   }
-} */
+}
 
 /* @media only screen and (min-width: 300px) {
   #sortBy{

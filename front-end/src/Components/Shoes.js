@@ -49,7 +49,7 @@ const Shoes = () => {
   };
 
   return (
-    <div className="ml-2 mt-3 text-secondary" id="sortBy">
+    <div className="text-secondary" id="sortBy">
       Sort by{" "}
       <select onChange={(e) => handleChange(e.target.value)}>
         <option value="" defaultValue></option>
