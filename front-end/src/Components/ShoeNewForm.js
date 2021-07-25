@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
-import "../Styles/ShoeNew.css";
 
 const API = apiURL();
 
@@ -85,7 +84,6 @@ export default function ShoeNewForm() {
           type="number"
           value={size}
           min="6"
-          // max="13"
           onChange={handleChange}
           required
         />
@@ -111,12 +109,9 @@ export default function ShoeNewForm() {
           onChange={handleChange}
           required
         />
-          <button
-            type="submit"
-            className="mt-5 bg-dark text-white"
-          >
-            Submit
-          </button>
+        <button type="submit" className="mt-5 bg-dark text-white">
+          Submit
+        </button>
       </form>
     </div>
   );

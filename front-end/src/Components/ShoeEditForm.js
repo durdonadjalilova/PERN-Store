@@ -2,8 +2,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
-// import stockImage from "../photos/IMG_5270.png";
-// import "../App.css"
 
 const API = apiURL();
 
@@ -43,10 +41,6 @@ export default function ShoeEditForm() {
       }
     };
     fetchShoe();
-    // axios.get(`${API}/shoes/${id}`).then(
-    //   (response) => setShoe(response.data.payload),
-    //   (error) => history.push(`/404`)
-    // );
   }, [id]);
 
   const handleSubmit = (e) => {
@@ -129,12 +123,12 @@ export default function ShoeEditForm() {
           required
         />
         <div className="mr-4 mt-3 d-flex justify-content-center mb-2 flex-row">
-        <button type="submit" className="mx-4 bg-dark text-white">
-          Submit
-        </button>
-        <Link to={`/shoes/${id}`}>
-          <button className="bg-dark text-white">Cancel</button>
-        </Link>
+          <button type="submit" className="mx-4 bg-dark text-white">
+            Submit
+          </button>
+          <Link to={`/shoes/${id}`}>
+            <button className="bg-dark text-white">Cancel</button>
+          </Link>
         </div>
       </form>
     </div>

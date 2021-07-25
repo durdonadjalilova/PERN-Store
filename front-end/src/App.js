@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory,
+} from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Edit from "./Pages/Edit";
 import FourOFour from "./Pages/FourOFour";
@@ -8,7 +13,6 @@ import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
 import ShowCart from "./Pages/ShowCart";
-import { useHistory } from "react-router-dom";
 import "./App.css";
 
 function App() {
