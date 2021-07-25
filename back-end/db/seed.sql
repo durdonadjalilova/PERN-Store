@@ -1,4 +1,4 @@
--- \c shoestore_dev;
+
 
 INSERT INTO shoes (brand, name, image_url, price, size, gender) VALUES
 ('Nike', 'Air Jordan 1 Mid', 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0d9e485f-bc09-4686-a53b-87afd15968ee/air-jordan-1-mid-shoe-nwV1GK.png', 125, 6, 'M'),
