@@ -3,9 +3,9 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <h2 className=" text-md-center mt-5 text-secondary " id="homepage">
+      <h1 className=" text-md-center mt-5 text-secondary " id="homepage">
         Welcome To PERN Famous Footwear!
-      </h2>
+      </h1>
       <span id="main">
         <img
           src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0d9e485f-bc09-4686-a53b-87afd15968ee/air-jordan-1-mid-shoe-nwV1GK.png"

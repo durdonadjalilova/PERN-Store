@@ -49,7 +49,7 @@ const Shoes = () => {
   };
 
   return (
-    <div>
+    <div className="ml-2 mt-3 text-secondary" id="sortBy">
       Sort by{" "}
       <select onChange={(e) => handleChange(e.target.value)}>
         <option value="" defaultValue></option>
@@ -74,7 +74,7 @@ const Shoes = () => {
           const { brand, name, image_url, price, size, gender, id } = shoe;
           return (
             <li key={id} className="list-group">
-              <h5 className="mt-3 text-secondary">{brand}</h5>
+              <h5 className="mt-3 text-secondary"> {brand}</h5>
               <h5 className="mr-3 ml-3 text-secondary"> {name}</h5>
               <br />
               <img
