@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <h1 className=" text-md-center mt-5 text-secondary " id="homepage">
+      <h1 className="mt-3 text-secondary" id="homepage">
         Welcome To PERN Famous Footwear!
       </h1>
       <span id="main">

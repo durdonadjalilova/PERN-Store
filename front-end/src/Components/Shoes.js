@@ -49,27 +49,29 @@ const Shoes = () => {
   };
 
   return (
-    <div className="text-secondary" id="sortBy">
-      Sort by{" "}
-      <select onChange={(e) => handleChange(e.target.value)}>
-        <option value="" defaultValue></option>
-        <option name="brand" value="brand">
-          brand
-        </option>
-        <option name="name" value="name">
-          name
-        </option>
-        <option name="price" value="price">
-          price
-        </option>
-        <option name="size" value="size">
-          size
-        </option>
-        <option name="gender" value="gender">
-          gender
-        </option>
-      </select>
-      <ul id="ul">
+    <div>
+      <div className="text-secondary" id="sortBy">
+        Sort by{" "}
+        <select onChange={(e) => handleChange(e.target.value)}>
+          <option value="" defaultValue></option>
+          <option name="brand" value="brand">
+            brand
+          </option>
+          <option name="name" value="name">
+            name
+          </option>
+          <option name="price" value="price">
+            price
+          </option>
+          <option name="size" value="size">
+            size
+          </option>
+          <option name="gender" value="gender">
+            gender
+          </option>
+        </select>
+      </div>
+      <ul  id="ul">
         {shoes.map((shoe) => {
           const { brand, name, image_url, price, size, gender, id } = shoe;
           return (
