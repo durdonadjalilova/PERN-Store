@@ -48,7 +48,7 @@ export default function ShoeEditForm() {
     updateShoe(shoe, id);
   };
 
-  const { brand, name, image_url, price, size, gender } = shoe;
+  let { brand, name, image_url, price, size, gender } = shoe;
 
   return (
     <div>
@@ -88,7 +88,7 @@ export default function ShoeEditForm() {
           value={image_url}
           onChange={handleChange}
           placeholder="Enter a URL"
-        ></input>
+        />
         <label htmlFor="size" className="text-secondary">
           Size:
         </label>
@@ -96,6 +96,7 @@ export default function ShoeEditForm() {
           id="size"
           type="number"
           value={size}
+          step="0.1"
           min="6"
           onChange={handleChange}
           required
@@ -107,6 +108,7 @@ export default function ShoeEditForm() {
           id="price"
           type="number"
           value={price}
+          step="0.11"
           min="1"
           onChange={handleChange}
           required

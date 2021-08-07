@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
 
 const API = apiURL();
@@ -83,6 +83,7 @@ export default function ShoeNewForm() {
           id="size"
           type="number"
           value={size}
+          step="0.1"
           min="6"
           onChange={handleChange}
           required
@@ -94,6 +95,7 @@ export default function ShoeNewForm() {
           id="price"
           type="number"
           value={price}
+          step="0.11"
           min="1"
           onChange={handleChange}
           required
@@ -109,9 +111,14 @@ export default function ShoeNewForm() {
           onChange={handleChange}
           required
         />
-        <button type="submit" className="mt-5 bg-dark text-white">
-          Submit
-        </button>
+        <div className="mr-4 mt-3 d-flex justify-content-center mb-2 flex-row">
+          <button type="submit" className="mx-4 bg-dark text-white">
+            Submit
+          </button>
+          <Link to={`/shoes`}>
+            <button className="bg-dark text-white">Cancel</button>
+          </Link>
+        </div>
       </form>
     </div>
   );

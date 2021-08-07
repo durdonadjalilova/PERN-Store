@@ -44,7 +44,7 @@ const Shoes = () => {
       } else if (sortProperty === "size" || sortProperty === "price") {
         return a[sortProperty] - b[sortProperty];
       } else {
-        return null
+        return null;
       }
     });
     setShoes(sorted);
@@ -73,24 +73,24 @@ const Shoes = () => {
           </option>
         </select>
       </div>
-      <ul  id="ul">
+      <ul id="ul">
         {shoes.map((shoe) => {
           const { brand, name, image_url, price, size, gender, id } = shoe;
           return (
             <li key={id} className="list-group">
               <Link to={`/shoes/${id}`}>
-              <h5 className="mt-3 text-secondary"> {brand}</h5>
-              <h5 className="mr-3 ml-3 text-secondary"> {name}</h5>
-              <br />
-              <img
-                src={image_url ? image_url : stockImage}
-                alt="shoes"
-                className="img-fluid img-thumbnail"
-              />
-              <br />
-              <h6 className="mt-2 text-secondary">${price}</h6>
-              <h6 className="text-secondary">Size: {size}</h6>
-              <h6 className="text-secondary">Gender: {gender}</h6>
+                <h5 className="mt-3 text-secondary"> {brand}</h5>
+                <h5 className="mr-3 ml-3 text-secondary"> {name}</h5>
+                <br />
+                <img
+                  src={image_url ? image_url : stockImage}
+                  alt="shoes"
+                  className="img-fluid img-thumbnail"
+                />
+                <br />
+                <h6 className="mt-2 text-secondary">${price}</h6>
+                <h6 className="text-secondary">Size: {size}</h6>
+                <h6 className="text-secondary">Gender: {gender}</h6>
                 {/* <button className="bg-dark text-white">Details</button> */}
               </Link>
               <br />

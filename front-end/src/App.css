@@ -188,3 +188,9 @@ margin-top: 10%;
   width: 15vw;
   height: auto;
 }
+
+#emptyCart {
+  font-size: large;
+  text-align: center;
+  padding: 10%;
+}

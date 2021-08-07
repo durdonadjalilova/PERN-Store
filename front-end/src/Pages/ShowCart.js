@@ -1,9 +1,9 @@
 import ShoppingCart from "../Components/ShoppingCart";
 
-function ShowCart({cart, removeShoes}) {
+function ShowCart({cart, removeShoes, inCart}) {
   return (
     <div>
-      <ShoppingCart cart={cart} removeShoes={removeShoes}/>
+      <ShoppingCart cart={cart} removeShoes={removeShoes} inCart={inCart} />
     </div>
   );
 }
