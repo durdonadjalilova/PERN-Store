@@ -43,6 +43,8 @@ const Shoes = () => {
         return a[sortProperty].localeCompare(b[sortProperty]);
       } else if (sortProperty === "size" || sortProperty === "price") {
         return a[sortProperty] - b[sortProperty];
+      } else {
+        return null
       }
     });
     setShoes(sorted);
@@ -76,6 +78,7 @@ const Shoes = () => {
           const { brand, name, image_url, price, size, gender, id } = shoe;
           return (
             <li key={id} className="list-group">
+              <Link to={`/shoes/${id}`}>
               <h5 className="mt-3 text-secondary"> {brand}</h5>
               <h5 className="mr-3 ml-3 text-secondary"> {name}</h5>
               <br />
@@ -85,11 +88,10 @@ const Shoes = () => {
                 className="img-fluid img-thumbnail"
               />
               <br />
-              <h6 className="text-secondary">${price}</h6>
+              <h6 className="mt-2 text-secondary">${price}</h6>
               <h6 className="text-secondary">Size: {size}</h6>
               <h6 className="text-secondary">Gender: {gender}</h6>
-              <Link to={`/shoes/${id}`}>
-                <button className="bg-dark text-white">Details</button>
+                {/* <button className="bg-dark text-white">Details</button> */}
               </Link>
               <br />
             </li>

@@ -14,6 +14,10 @@ import New from "./Pages/New";
 import Show from "./Pages/Show";
 import ShowCart from "./Pages/ShowCart";
 import "./App.css";
+import axios from "axios";
+import { apiURL } from "./util/apiURL";
+
+const API = apiURL();
 
 function App() {
   let history = useHistory();
@@ -22,6 +26,17 @@ function App() {
   const addToCart = (shoes) => {
     setCart([...cart, shoes]);
     history.push(`/shoes/cart`);
+  };
+
+  const deleteShoe = async (id) => {
+    try {
+      await axios.delete(`${API}/shoes/${id}`);
+      const filterArr = cart.filter((item) => item.id !== Number(id));
+      setCart(filterArr);
+      console.log(filterArr);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const removeShoes = (shoes) => {
@@ -47,7 +62,7 @@ function App() {
             <ShowCart cart={cart} removeShoes={removeShoes} />
           </Route>
           <Route exact path="/shoes/:id">
-            <Show addToCart={addToCart} />
+            <Show cart={cart} addToCart={addToCart} deleteShoe={deleteShoe} />
           </Route>
           <Route path="/shoes/:id/edit">
             <Edit />

@@ -6,19 +6,10 @@ import stockImage from "../photos/IMG_5270.png";
 
 const API = apiURL();
 
-function ShoeDetails({ addToCart }) {
+function ShoeDetails({ addToCart, deleteShoe }) {
   let [selectedShoe, setSelectedShoe] = useState({});
   let { id } = useParams();
   let history = useHistory();
-
-  const deleteShoe = async (id) => {
-    try {
-      let res = await axios.delete(`${API}/shoes/${id}`);
-      setSelectedShoe(res.data.payload);
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   const handleDelete = async () => {
     await deleteShoe(id);
