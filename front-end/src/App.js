@@ -23,10 +23,10 @@ function App() {
   let history = useHistory();
 
   const [cart, setCart] = useState([]);
-  const [inCart, setInCart] = useState(false)
+  const [inCart, setInCart] = useState(false);
 
   const addToCart = (shoes) => {
-    setInCart(true)
+    setInCart(true);
     setCart([...cart, shoes]);
     history.push(`/shoes/cart`);
   };
@@ -35,10 +35,10 @@ function App() {
     try {
       await axios.delete(`${API}/shoes/${id}`);
       const filterArr = cart.filter((item) => item.id !== Number(id));
-      if(filterArr.length===0) {
-        setInCart(false)
+      if (filterArr.length === 0) {
+        setInCart(false);
       } else {
-        setInCart(true)
+        setInCart(true);
       }
       setCart(filterArr);
       console.log(filterArr);
@@ -49,13 +49,12 @@ function App() {
 
   const removeShoes = async (shoes) => {
     const filterArr = await cart.filter((item) => item.id !== shoes.id);
-    if(filterArr.length===0) {
-      setInCart(false)
+    if (filterArr.length === 0) {
+      setInCart(false);
     } else {
-      setInCart(true)
+      setInCart(true);
     }
     setCart(filterArr);
-    
   };
 
   return (
@@ -76,7 +75,7 @@ function App() {
             <ShowCart cart={cart} removeShoes={removeShoes} inCart={inCart} />
           </Route>
           <Route exact path="/shoes/:id">
-            <Show cart={cart} addToCart={addToCart} deleteShoe={deleteShoe} />
+            <Show addToCart={addToCart} deleteShoe={deleteShoe} />
           </Route>
           <Route path="/shoes/:id/edit">
             <Edit />

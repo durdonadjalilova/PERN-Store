@@ -17,6 +17,7 @@ function ShoppingCart({ cart, removeShoes, inCart }) {
               &nbsp; &nbsp;
               {shoes.name}
               &nbsp; &nbsp; ${shoes.price}
+              &nbsp; &nbsp;
               <button
                 onClick={() => removeShoes(shoes)}
                 className="ml-3 bg-dark text-white"

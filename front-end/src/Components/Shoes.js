@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { apiURL } from "../util/apiURL";
 import stockImage from "../photos/IMG_5270.png";
+import "../../node_modules/rfs/postcss"
 
 const API = apiURL();
 

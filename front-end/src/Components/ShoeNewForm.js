@@ -12,7 +12,7 @@ export default function ShoeNewForm() {
     image_url: "",
     price: 0,
     size: 0,
-    gender: "",
+    gender: ""
   });
 
   let history = useHistory();
@@ -83,7 +83,7 @@ export default function ShoeNewForm() {
           id="size"
           type="number"
           value={size}
-          step="0.1"
+          step="0.5"
           min="6"
           onChange={handleChange}
           required
@@ -95,7 +95,7 @@ export default function ShoeNewForm() {
           id="price"
           type="number"
           value={price}
-          step="0.11"
+          step="0.01"
           min="1"
           onChange={handleChange}
           required

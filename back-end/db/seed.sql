@@ -3,8 +3,8 @@
 INSERT INTO shoes (brand, name, image_url, price, size, gender) VALUES
 ('Nike', 'Air Jordan 1 Mid', 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0d9e485f-bc09-4686-a53b-87afd15968ee/air-jordan-1-mid-shoe-nwV1GK.png', 125, 6, 'M'),
 ('Adidas', 'NMD_R1 Primeblue Shoes', 'https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/62d96641e799450fbbdfad0800cb06ed_9366/nmd_r1-primeblue-shoes.jpg', 140, 10, 'W'),
-('Vans', 'Checkerboard Slip-On', 'https://images.vans.com/is/image/Vans/EYEBWW-HERO?$583x583$', 55, 9, 'UNI'),
-('Timberland', 'Premium Waterproof Boots', 'https://images.timberland.com/is/image/timberland/10061024-HERO?$496x496$', 198, 8, 'M'),
+('Vans', 'Checkerboard Slip-On', 'https://images.vans.com/is/image/Vans/EYEBWW-HERO?$440x440$', 55, 9, 'UNI'),
+('Timberland', 'Premium Waterproof Boots', 'https://images.timberland.com/is/image/timberland/10061024-HERO?$440x440$', 198, 8, 'M'),
 ('Gucci', 'Gucci Basket Sneaker', 'https://media.gucci.com/style/DarkGray_South_0_160_470x470/1623087013/661301_2SH80_9062_001_100_0000_Light-Mens-Gucci-Basket-sneaker.jpg', 950, 8, 'M'),
 ('Converse', 'Run Star Motion', 'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw715ee540/images/e_08/171545C_E_08X1.jpg?sw=406', 120, 7, 'W'),
 ('Reebok', 'Club C 85 Vintage', 'https://assets.reebok.com/images/w_766,h_766,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/94b58f6f42004f03949faa99017b30fb_9366/club-c-85-vintage-mens-shoes.jpg', 75, 9.5, 'UNI'),

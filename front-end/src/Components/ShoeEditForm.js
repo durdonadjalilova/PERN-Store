@@ -96,7 +96,7 @@ export default function ShoeEditForm() {
           id="size"
           type="number"
           value={size}
-          step="0.1"
+          step="0.5"
           min="6"
           onChange={handleChange}
           required
@@ -108,7 +108,7 @@ export default function ShoeEditForm() {
           id="price"
           type="number"
           value={price}
-          step="0.11"
+          step="0.01"
           min="1"
           onChange={handleChange}
           required
