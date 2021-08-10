@@ -8,7 +8,7 @@ function ShoppingCart({ cart, removeShoes, inCart }) {
       <ul >
         {cart.map((shoes) => {
           return (
-            <li key={shoes.id} className="d-flex flex-column flex-wrap-wrap justify-content-around align-items-start mb-2" >
+            <li key={shoes.id} className="d-flex ml-5 flex-column flex-wrap-wrap justify-content-around align-items-start mb-2" >
               <img
               id="cartShoeImage"
                 src={shoes.image_url ? shoes.image_url : stockImage}
@@ -33,7 +33,7 @@ function ShoppingCart({ cart, removeShoes, inCart }) {
     );
   } else {
     text = (
-      <p id="emptyCart" className="mt-2 text-secondary text-align-center">
+      <p id="emptyCart" className="mt-5 text-secondary text-center">
         Your Cart Is Empty
       </p>
     );
