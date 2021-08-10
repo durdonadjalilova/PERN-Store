@@ -8,7 +8,7 @@ body {
 }
 
 nav h4 {
-  font-size: 18px;
+  font-size: 100%;
 }
 
 ul {
@@ -42,19 +42,19 @@ img {
 }
 
 #main {
-display: flex;
-margin-left: auto;
-margin-right: auto;
-justify-content: space-around;
-align-items: center;
-margin-top: 10%;
-width:50vw;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10%;
+  width: 50vw;
 }
 
 #main img {
   height: 30vh;
   width: 30vh;
-  margin:auto
+  margin: auto;
 }
 
 #main:hover {
@@ -94,26 +94,52 @@ width:50vw;
   margin-top: 2%;
   font-weight: bold;
 }
-.shoppingCart {
-  list-style:none;
-  margin-top: 2%;
-  font-weight: bold;
-  width: 50vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+
+#cartShoeImage {
+  width: 15vw;
+  height: 30vh;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 750px) {
+  ul {
+    display: grid;
+    grid-template-columns: auto;
+    width: 50vw;
+    margin-left: 20%;
+  }
+
+  .list-group {
+    width: 30vw;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #h1 {
+    font-size: 150%;
+  }
+
+  nav h4 {
+    font-size: 80%;
+  }
+
+  #cartShoeImage {
+    width: 35vw;
+    height: 25vh;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
 }
 
 @media only screen and (max-width: 375px) {
   nav {
-    width: 375px;
+    width: 100vw;
   }
 
   nav h4 {
-    font-size: 15px;
+    font-size: 60%;
   }
 
   input {
@@ -126,13 +152,9 @@ width:50vw;
   }
 
   .list-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: solid 1px white;
-    width: 250px;
-    margin-top: 40px;
+    width: 60vw;
+    margin-top: 20%;
+    margin-left: -15%;
   }
 
   #homepage {
@@ -142,10 +164,10 @@ width:50vw;
   }
 
   #h1 {
-    font-size: 32px;
+    font-size: 120%;
     text-align: center;
     display: block;
-    margin-left: 10px;
+    margin-right: 10%;
   }
 
   #main img {
@@ -176,22 +198,16 @@ width:50vw;
     margin-top: 20px;
     margin-right: 100px;
   }
-}
 
-.shoppingCart {
- display: flex;
- justify-content: space-ar;
- align-items: center;
- width: 80vw;
-}
-
-.shoppingCart img {
-  width: 15vw;
-  height: auto;
-}
-
-#emptyCart {
-  font-size: large;
-  text-align: center;
-  padding: 10%;
+  #emptyCart {
+    font-size: large;
+    text-align: center;
+    padding: 10%;
+  }
+  #cartShoeImage {
+    width: 50vw;
+    height: 25vh;
+    margin-left: -10%;
+    margin-top: 5%;
+  }
 }

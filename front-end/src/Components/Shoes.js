@@ -80,8 +80,8 @@ const Shoes = () => {
           return (
             <li key={id} className="list-group">
               <Link to={`/shoes/${id}`}>
-                <h5 className="mt-3 text-secondary"> {brand}</h5>
-                <h5 className="mr-3 ml-3 text-secondary"> {name}</h5>
+                <h6 className="mt-3 text-secondary"> {brand}</h6>
+                <h6 className="mr-3 ml-3 text-secondary"> {name}</h6>
                 <br />
                 <img
                   src={image_url ? image_url : stockImage}
@@ -92,7 +92,6 @@ const Shoes = () => {
                 <h6 className="mt-2 text-secondary">${price}</h6>
                 <h6 className="text-secondary">Size: {size}</h6>
                 <h6 className="text-secondary">Gender: {gender}</h6>
-                {/* <button className="bg-dark text-white">Details</button> */}
               </Link>
               <br />
             </li>

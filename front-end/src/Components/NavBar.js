@@ -6,6 +6,7 @@ const NavBar = () => {
       <NavLink to="/" className="text-white navbar-brand " >
         <h1 id="h1">PERN Famous Footwear</h1>
       </NavLink>
+      <div>
       <NavLink to="/shoes" className="text-white navbar-brand">
         <h4>Shoes</h4>
       </NavLink>
@@ -15,6 +16,7 @@ const NavBar = () => {
       <NavLink to="/shoes/cart" className="text-white navbar-brand">
         <h4>Shopping Cart</h4>
       </NavLink>
+      </div>
     </nav>
   );
 };

@@ -56,29 +56,31 @@ function ShoeDetails({ addToCart, deleteShoe }) {
           </div>
         </div>
         <div
-          className="d-flex align-items-center bd-highlight flex-row mb-2"
+          className="d-flex justify-content-center align-items-center bd-highlight flex-row mb-2"
           id="buttons"
         >
           <Link to={"/shoes"}>
-            <button className="mx-1 bg-dark text-white">BACK</button>
+            <button className="mx-2 bg-dark text-white">BACK</button>
           </Link>
           <button onClick={handleDelete} className="mx-1 bg-dark text-white">
             DELETE
           </button>
           <Link to={`/shoes/${id}/edit`}>
-            <button className="mx-1 bg-dark text-white">EDIT</button>
+            <button className="mx-2 bg-dark text-white">EDIT</button>
           </Link>
+            </div>
+          <div className="mt-2 d-flex justify-content-center align-items-center bg-dark text-white">
           <Link to={`/shoes/cart`}>
             <button
               onClick={() => {
                 addToCart(selectedShoe);
               }}
-              className="mx-1 bg-dark text-white"
+              
             >
               ADD TO CART
             </button>
           </Link>
-        </div>
+          </div>
       </div>
     </div>
   );

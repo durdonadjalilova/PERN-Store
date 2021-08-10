@@ -57,7 +57,7 @@ export default function ShoeEditForm() {
         className="d-flex justify-content-center align-items-center text-center mb-2 flex-column "
         id="editForm"
       >
-        <label htmlFor="brand" className="text-secondary">
+        <label htmlFor="brand" className="mt-5 text-secondary">
           Brand:
         </label>
         <input

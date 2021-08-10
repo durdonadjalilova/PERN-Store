@@ -5,24 +5,26 @@ function ShoppingCart({ cart, removeShoes, inCart }) {
   let text;
   if (inCart) {
     text = (
-      <ul className="d-flex justify-content-center align-items-center mb-2 flex-column">
+      <ul >
         {cart.map((shoes) => {
           return (
-            <li key={shoes.id} className="mt-5 shoppingCart text-secondary">
+            <li key={shoes.id} className="d-flex flex-column flex-wrap-wrap justify-content-around align-items-start mb-2" >
               <img
+              id="cartShoeImage"
                 src={shoes.image_url ? shoes.image_url : stockImage}
                 alt="shoes"
               />
-              {shoes.brand}
+             <h6 className="mt-3">Brand: {shoes.brand}</h6>
               &nbsp; &nbsp;
-              {shoes.name}
-              &nbsp; &nbsp; ${shoes.price}
+              <h6> Name: {shoes.name}</h6>
+              &nbsp; &nbsp; 
+              <h6>Price: ${shoes.price}</h6>
               &nbsp; &nbsp;
               <button
                 onClick={() => removeShoes(shoes)}
-                className="ml-3 bg-dark text-white"
+                className="mb-5 bg-dark text-white"
               >
-                x
+                DELETE
               </button>
             </li>
           );
